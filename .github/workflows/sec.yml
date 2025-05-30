@@ -1,0 +1,41 @@
+# ~/.GH/Qompass/nur-packages/.github/workflows/sec.yml
+# ----------------------------------------------------
+# Copyright (C) 2025 Qompass AI, All rights reserved
+
+name: "Qompass AI NUR Sec Updates"
+on:
+  schedule:
+    - cron: '0 2 * * 1'
+  workflow_dispatch:
+
+jobs:
+  security-scan:
+    runs-on: self-hosted
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Install Nix
+      uses: cachix/install-nix-action@v27
+    
+    - name: Check for vulnerable dependencies
+      run: |
+        # Check for known vulnerabilities in dependencies
+        nix-instantiate --eval --strict -A lib.vulnerabilityCheck default.nix
+    
+    - name: Update package versions
+      run: |
+        for pkg in $(nix-instantiate --eval --strict -A lib.updatablePackages default.nix); do
+          echo "Checking updates for $pkg"
+        done
+    
+    - name: Create update PR
+      if: ${{ env.UPDATES_AVAILABLE == 'true' }}
+      uses: peter-evans/create-pull-request@v6
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: "chore: update package versions"
+        title: "Automated package updates"
+        body: "Automated updates for NUR packages"
+        branch: "automated-updates"
+

@@ -1,0 +1,43 @@
+# ~/.GH/Qompass/nur-packages/.github/workflows/val.yml
+# ----------------------------------------------------
+# Copyright (C) 2025 Qompass AI, All rights reserved
+
+name: "Qompass NUR Validation"
+on:
+  pull_request:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    runs-on: self-hosted
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Install Nix
+      uses: cachix/install-nix-action@v27
+      with:
+        extra_nix_config: |
+          experimental-features = nix-command flakes
+    
+    - name: Check structure
+      run: |
+        # Verify all packages are properly structured
+        nix-instantiate --eval --strict -A lib.packageNames default.nix
+    
+    - name: Check break
+      run: |
+        # List broken packages
+        nix-instantiate --eval --strict -A lib.brokenPackages default.nix
+    
+    - name: Validate metadata
+      run: |
+        # Check that all packages have proper meta attributes
+        nix-instantiate --eval --strict -A lib.metaChecks default.nix
+    
+    - name: Check imports
+      run: |
+        # Ensure no direct nixpkgs imports
+        ! grep -r "import <nixpkgs>" --include="*.nix" .
+
