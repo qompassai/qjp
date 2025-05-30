@@ -6,8 +6,8 @@
 
 <h2> Qompass AI Jetpack NixOS Fork </h2>
 
-![Repository Views](https://komarev.com/ghpvc/?username=qompassai-jetpack-nixos)
-![GitHub all releases](https://img.shields.io/github/downloads/qompassai/jetpack-nixos/total?style=flat-square)
+![Repository Views](https://komarev.com/ghpvc/?username=qompassai-qjp)
+![GitHub all releases](https://img.shields.io/github/downloads/qompassai/qjp/total?style=flat-square)
 
 <a href="https://github.com/qompassai/nur-packages">
   <img src="https://img.shields.io/github/stars/qompassai/nur-packages?style=for-the-badge&logo=github&label=QompassAI%20NUR&color=003366" alt="QompassAI NUR Stars">
@@ -31,10 +31,10 @@
 <a href="https://developer.nvidia.com/cuda-toolkit">
   <img src="https://img.shields.io/badge/CUDA-12.8-76B900?style=flat-square&logo=nvidia&logoColor=white" alt="CUDA Support">
 </a>
-<a href="https://github.com/qompassai/jetpack-nixos">
+<a href="https://github.com/qompassai/qjp">
   <img src="https://img.shields.io/badge/Jetpack-NixOS-4A90E2?style=flat-square&logo=nixos&logoColor=white" alt="Jetpack NixOS">
 </a>
-<a href="https://github.com/anduril/jetpack-nixos">
+<a href="https://github.com/anduril/qjp">
   <img src="https://img.shields.io/badge/Anduril-Fork-FF6B35?style=flat-square&logo=github&logoColor=white" alt="Anduril Fork">
 </a>
 <a href="https://openquantumsafe.org">
@@ -43,7 +43,7 @@
 <br>
 
 <a href="#ai-packages">
-  <img src="https://img.shields.io/badge/AI%2FML-Packages-00ACC1?style=flat-square&logo=tensorflow&logoColor=white" alt="AI/ML Packages">
+  <img src="https://img.shields.io/badge/AI%2F-Packages-00ACC1?style=flat-square&logo=tensorflow&logoColor=white" alt="AI/ML Packages">
 </a>
 <a href="#quantum-packages">
   <img src="https://img.shields.io/badge/Quantum-Packages-7B1FA2?style=flat-square&logo=atom&logoColor=white" alt="Quantum Packages">
@@ -57,12 +57,15 @@
 
 ______________________________________________________________________
 
-<details id="Contact Qompass AI">
-  <summary><strong>Contact Qompass AI</strong></summary>
+<details id="About the Founder">
+  <summary><strong>About the Founder</strong></summary>
 
 <div align="center">
   <p>Matthew A. Porter<br>
+  Founder & CEO<br>
   Qompass AI, Spokane, WA</p>
+</div>
+</details>
 
 <h3>Publications</h3>
   <p>
@@ -87,7 +90,6 @@ ______________________________________________________________________
 [![Epic Games Developer](https://img.shields.io/badge/Epic_Games-Developer_Program-313131?style=for-the-badge&logo=epic-games&logoColor=white)](https://dev.epicgames.com/)
 
 </div>
-</details>
 
 <h3>Professional Profiles</h3>
   <p>
@@ -112,12 +114,15 @@ ______________________________________________________________________
     </a>
   </p>
 
+</div>
+</details>
+
 <div align="center">
-<h3>Support & Funding</h3>
+<h3>💰 Our Support & Funding</h3>
 
 <table>
 <tr>
-<th align="center">💰 Pre-Seed Funding 2023-2025</th>
+<th align="center">🏛️ Pre-Seed Funding 2023-2025</th>
 <th align="center">🏆 Amount</th>
 <th align="center">📅 Date</th>
 </tr>
@@ -127,17 +132,35 @@ ______________________________________________________________________
 <td align="center">March 2024</td>
 </tr>
 <tr>
-<td onclick="window.open('https://github.com/qompassai/PathFinders', '_blank')">
-  <a href="https://github.com/qompassai/PathFinders" title="GitHub Repository">Pathfinders Intern Program</a>
-  <br>
-  <small><a href="https://www.linkedin.com/posts/evergreenbio_bioscience-internships-workforcedevelopment-activity-7253166461416812544-uWUM/" onclick="event.stopPropagation()" target="_blank">View on LinkedIn</a></small>
-</td>
+<td><a href="https://github.com/qompassai/PathFinders" title="GitHub Repository">Pathfinders Intern Program</a><br>
+<small><a href="https://www.linkedin.com/posts/evergreenbio_bioscience-internships-workforcedevelopment-activity-7253166461416812544-uWUM/" target="_blank">View on LinkedIn</a></small></td>
 <td align="center">$2,000</td>
 <td align="center">October 2024</td>
 </tr>
 </table>
 
+<br>
+<h4>🤝 Support Our Mission</h4>
+
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub-Sponsor-EA4AAA?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/phaedrusflow)
+[![Patreon](https://img.shields.io/badge/Patreon-Support-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://patreon.com/qompassai)
+[![Liberapay](https://img.shields.io/badge/Liberapay-Donate-F6C915?style=for-the-badge&logo=liberapay&logoColor=black)](https://liberapay.com/qompassai)
+[![Open Collective](https://img.shields.io/badge/Open%20Collective-Support-7FADF2?style=for-the-badge&logo=opencollective&logoColor=white)](https://opencollective.com/qompassai)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/phaedrusflow)
+
+<details>
+<summary><strong>🔐 Cryptocurrency Donations</strong></summary>
+
+**Monero (XMR):**
+
+42HGspSFJQ4MjM5ZusAiKZj9JZWhfNgVraKb1eGCsHoC6QJqpo2ERCBZDhhKfByVjECernQ6KeZwFcnq8hVwTTnD8v4PzyH
+
+</details>
+
 <p><i>Funding helps us continue our research at the intersection of AI, healthcare, and education</i></p>
+
+📄 **[Complete funding configuration](./FUNDING.yml)**
+
 </div>
 
 <details id="FAQ">
