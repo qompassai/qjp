@@ -1,0 +1,41 @@
+# ~/.GH/Qompass/nur-packages/.github/workflows/flake.yml
+# ------------------------------------------------------
+# Copyright (C) 2025 Qompass AI, All rights reserved
+
+name: "Qompass AI Flake Check"
+on:
+  push:
+    paths: [ 'flake.nix', 'flake.lock' ]
+  pull_request:
+    paths: [ 'flake.nix', 'flake.lock' ]
+
+jobs:
+  flake-check:
+    runs-on: self-hosted
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Install Nix
+      uses: cachix/install-nix-action@v27
+      with:
+        extra_nix_config: |
+          experimental-features = nix-command flakes
+    
+    - name: Check flake
+      run: nix flake check --all-systems
+    
+    - name: Build flake packages
+      run: |
+        nix build .#packages.x86_64-linux --no-link
+        nix build .#packages.aarch64-linux --no-link
+    
+    - name: Update flake lock
+      if: github.event_name == 'schedule'
+      run: |
+        nix flake update
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add flake.lock
+        git commit -m "chore: update flake.lock" || exit 0
+        git push
