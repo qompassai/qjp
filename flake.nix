@@ -18,15 +18,10 @@
     supportedSystems = ["x86_64-linux" "aarch64-linux"];
     hardwareConfigs = {
       orin-agx-devkit = { som = "orin-agx"; carrierBoard = "devkit"; };
-      orin-agx-industrial-devkit = { som = "orin-agx-industrial"; carrierBoard = "devkit"; };
       orin-nx-devkit = { som = "orin-nx"; carrierBoard = "devkit"; };
       orin-nano-devkit = { som = "orin-nano"; carrierBoard = "devkit"; };
       orin-nx-devkit-super = { som = "orin-nx"; carrierBoard = "devkit"; super = true; };
       orin-nano-devkit-super = { som = "orin-nano"; carrierBoard = "devkit"; super = true; };
-      xavier-agx-devkit = { som = "xavier-agx"; carrierBoard = "devkit"; };
-      xavier-agx-industrial-devkit = { som = "xavier-agx-industrial"; carrierBoard = "devkit"; };
-      xavier-nx-devkit = { som = "xavier-nx"; carrierBoard = "devkit"; };
-      xavier-nx-emmc-devkit = { som = "xavier-nx-emmc"; carrierBoard = "devkit"; };
     };
     platformConfigs = {
       aarch64_native = {
@@ -69,7 +64,6 @@
           lib.nameValuePair "${prefix}-${name}" 
           config.system.build.${scriptType}
         ) supportedNixOSConfigurations;
-
     in if system == "x86_64-linux" then {
       iso_minimal = self.nixosConfigurations.installer_minimal_cross.config.system.build.isoImage;
       inherit (self.legacyPackages.${system})
