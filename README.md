@@ -343,7 +343,7 @@ We also use the cleaned-up vendor kernel from OE4T.
   <summary><strong>About the Founder</strong></summary>
 
 <div align="center">
-  <p>Matthew A. Porter<br>
+  <p>Owner<br>
   Founder & CEO<br>
   Qompass AI, Spokane, WA</p>
 
@@ -371,7 +371,7 @@ We also use the cleaned-up vendor kernel from OE4T.
 <h3>Professional Profiles</h3>
   <p>
     <a href="https://www.linkedin.com/in/matt-a-porter-103535224/">
-      <img src="https://img.shields.io/badge/LinkedIn-Matt--Porter-blue?style=flat-square&logo=linkedin" alt="Personal LinkedIn">
+      <img src="https://img.shields.io/badge/LinkedIn-Owner-blue?style=flat-square&logo=linkedin" alt="Personal LinkedIn">
     </a>
     <a href="https://www.linkedin.com/company/95058568/">
       <img src="https://img.shields.io/badge/LinkedIn-Qompass--AI-blue?style=flat-square&logo=linkedin" alt="Startup LinkedIn">
