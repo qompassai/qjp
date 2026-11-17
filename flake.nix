@@ -1,6 +1,12 @@
 {
+  description = "QJP - Qompass AI JetPack";
+
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
+    # D-1642: pinned rev, not a floating branch. nixos-26.05 rev
+    # b349185b is the highest stable pin at which upstream
+    # jetpack-nixos @ 193c62f3 evaluates JP6 + JP7 for all Orin
+    # boards (CEILING-SPIKE.md rows 1/3). Bump deliberately.
+    nixpkgs.url = "github:nixos/nixpkgs/b349185bb79c7cf7ad8ea8c097931730bf473c71";
 
     cuda-legacy = {
       url = "github:nixos-cuda/cuda-legacy";
